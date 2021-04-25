@@ -22,7 +22,7 @@ class LoginActivity: AppCompatActivity(){
         }
         back_to_reg_auth.setOnClickListener() {
             Log.d("MainActivity", "Back to reg")
-            intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

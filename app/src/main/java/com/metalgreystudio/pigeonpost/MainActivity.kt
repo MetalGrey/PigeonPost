@@ -105,7 +105,8 @@ class MainActivity : AppCompatActivity() {
         ref.setValue(user)
                 .addOnSuccessListener {
                     Log.d("MainActivity", "User saved to database, $user")
-                    intent = Intent(this, LatestMessagsesActivity::class.java)
+                    val intent = Intent(this, LatestMessagsesActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
                 }
     }
