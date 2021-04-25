@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "953579627498",
+    "firebase_url": "https://pigeon-post-a2572-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pigeon-post-a2572",
+    "storage_bucket": "pigeon-post-a2572.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953579627498:android:93a686cfc9d76dac558893",
+        "android_client_info": {
+          "package_name": "com.metalgreystudio.pigeonpost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953579627498-q56r5j63ejgdkk6gutcq6st6afe5caoc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFjm_NE-rnscPw6Sd3pYeTP8vNMBMtSYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953579627498-q56r5j63ejgdkk6gutcq6st6afe5caoc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
