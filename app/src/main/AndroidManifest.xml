@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PigeonPost">
-        <activity android:name=".NewMessageActivity"></activity>
         <activity android:name=".LatestMessagsesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +24,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".NewMessageActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LatestMessagsesActivity"/>
+        </activity>
     </application>
 
 </manifest>
