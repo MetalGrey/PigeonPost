@@ -15,6 +15,10 @@ import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+import com.google.android.gms.tasks.Task
+
+
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -90,10 +94,17 @@ class MainActivity : AppCompatActivity() {
         if (selectedPhotoURL == null) return
         val filename = UUID.randomUUID().toString()
         val ref = FirebaseStorage.getInstance().getReference("/images/users/$filename")
+
+
         ref.putFile(selectedPhotoURL!!)
                 .addOnSuccessListener {
                     Log.d("MainActivity", "successfully load ${it.metadata?.path}")
-                    saveUserToFirebase(filename.toString())
+                    ref.downloadUrl.addOnSuccessListener {
+                        it.toString()
+                        Log.d("Download1", "$it")
+                        saveUserToFirebase(it.toString())
+                    }
+
                 }
 
 
@@ -113,5 +124,6 @@ class MainActivity : AppCompatActivity() {
 
 }
 data class User(val uid: String? = null, val username: String? = null, val email: String? = null, val profile_image: String? = null) {
+    constructor(): this("", "", "", "")
 
 }
